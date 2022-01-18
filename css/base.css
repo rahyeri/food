@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+body{font-family:'NanumSquare', 'Noto Sans KR', 'Nanum Gothic', 'MalgunGothic', sans-serif;
+font-size:12px;
+background-color:#fff;
+color:#333333;
+
+}
+input[type="password"]{font-family:'Noto Sans KR', 'Nanum Gothic', 'MalgunGothic', sans-serif;
+}
+
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.s_1 > h3 .s_1title{
+  font-family: 'GowunBatang-Regular';
+  color:#64230a;
+  font-weight:bold;}
+p, a, h1, h2, h3, h4, h5, h6, tr, span, li, div, input, textarea, select, caption, table th, table td {font-family:'NanumSquare', 'Nanum Gothic', 'MalgunGothic', 'Dotum', 'Gulim', 'Arial', sans-serif; transform: skew(-0.03deg); 
+}
+/* 하이퍼링크 서식 */
+a{
+    color:#333333;
+    text-decoration:none;
+  }
+ 
+  #toggle, h6, .none, label[for="family"]{display:none; }

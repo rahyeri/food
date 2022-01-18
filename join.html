@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>건강한 빵을 생각하는 뚜레쥬르입니다</title>
+        <link rel="shortcut icon" type="./image/x-icon" href="./image/icon/pico.ico">
+        <!-- 리셋 -->
+        <link
+        href="./css/reset.css" rel="stylesheet" type="text/css">
+        <!-- 베이스 -->
+        <link
+        href="./css/base.css" rel="stylesheet" type="text/css">
+        <!-- 레이아웃-->
+        <link
+        href="./css/layout.css" rel="stylesheet" type="text/css">
+        <!-- 피씨 -->
+        <link
+        href="./css/pc.css" rel="stylesheet" type="text/css">
+        <!-- 타블렛 -->
+        <link
+        href="./css/tablet.css" rel="stylesheet" type="text/css">
+        <!-- 모바일 -->
+        <link
+        href="./css/mobile.css" rel="stylesheet" type="text/css">
+        <!-- 로그인 스타일시트 -->
+        <link
+        href="./css/join2.css" rel="stylesheet" type="text/css">
+        <!-- 스와이퍼 -->
+        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+        <link
+        href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+        <!-- 아이콘폰트 -->
+        <link
+        href="./css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- 나눔스퀘어 -->
+        <link
+        rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+        <!-- 애니메이션  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <style></style>
+        <!-- 스와이퍼스크립트 -->
+        <script src="./script/prefixfree.min.js"></script>
+        <script src="./script/swiper.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- 헤더 -->
+        <header>
+            <input type="checkbox" id="toggle">
+            <div id="h_top">
+                <nav>
+                    <ul class="nav_top">
+                        <li>
+                            <fieldset>
+                                <legend>검색폼</legend>
+                                <input type="text" id="s_box" placeholder=" 메뉴명 or 매장명"><label for="s_box">
+                                    <i class="fas fa-search"></i>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <a href="sub.html" title="기사채용안내">기사채용안내</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav_top2">
+                        <li>
+                            <a href="sub.html" title="창업안내">창업안내</a>
+                        </li>
+                        <li>
+                            <a href="sub.html" title="매장안내">매장안내</a>
+                        </li>
+                        <li>
+                            <a href="login.html" title="로그인">로그인</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="h_bottom">
+                <h1>
+                    <a href="index.html"><img src="./image/main/logo.png" alt="메인로고"></a>
+                </h1>
+                <label for="toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <nav class="gnb">
+                    <label for="toggle">
+                        <i class="fas fa-times"></i>
+                    </label>
+                    <ul>
+                        <li>
+                            <label for="sub01">
+                                브랜드스토리
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub01">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="브랜드스토리">브랜드 스토리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="새로워진뚜레쥬르">새로워진 뚜레쥬르</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="글로벌 뚜레쥬르">글로벌 뚜레쥬르</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="착한 빵 캠페인">착한 빵 캠페인</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="뉴스&공지사항">뉴스&amp;공지사항</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub02">
+                                제품안내
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub02">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub_new.html" title="신메뉴">신메뉴</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="빵">빵</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="케이크">케이크</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="델리">델리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="선물">선물</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="디저트&음료">디저트&amp;음료</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub03">
+                                이벤트&amp;멤버십
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub03">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="진행중인 이벤트">진행중인 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="이벤트 당첨자">이벤트 당첨자</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="CJ 멤버십">CJ 멤버십</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="제휴 혜택">제휴 혜택</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub04">
+                                케이크 예약 서비스
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub04">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="예약&픽업서비스">예약&amp;픽업서비스</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="케이크 배달신청">케이크 배달신청</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub05">
+                                고객센터
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub05">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="고객센터">1&#58;1문의게시판</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="창업안내">창업안내</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="매장안내">매장안내</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="기사 채용안내">기사 채용안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 타블렛 내비용 -->
+                    <div class="sns_icon">
+                        <a href="about.html" title="인스타그램 바로가기">
+                            <i class="fab fa-instagram">&nbsp;</i>
+                        </a>
+                        <a href="about.html" title="페이스북 바로가기">
+                            <i class="fab fa-facebook">&nbsp;</i>
+                        </a>
+                        <a href="about.html" title="트위터 바로가기">
+                            <i class="fab fa-twitter">&nbsp;</i>
+                        </a>
+                        <a href="login.html" title="로그인">LOGIN</a>
+                        <fieldset class="nav_s">
+                            <legend>검색폼</legend>
+                            <input type="text" id="nav_s" placeholder=" 메뉴명 or 매장명"><label for="nav_s">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </fieldset>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- 메인 -->
+        <!--메인  -->
+        <main>
+            <form name="login" method="post" action="a.php">
+                <section>
+                    <h2 class="join_t">회원가입</h2>
+                    <div class="txt">
+                        <iframe src="join_txt1.html" width="1000" height="200"></iframe>
+                    </div>
+                    <span class="button b1">동의하지않음</span>
+                    <span class="button b2">동의합니다</span>
+                    <div class="txt">
+                        <iframe src="join_txt2.html" width="1000" height="200"></iframe>
+                    </div>
+                    <span class="button b1">동의하지않음</span>
+                    <span class="button b2">동의합니다</span>
+
+
+                    <fieldset class="join_field">
+
+                        <div class="j_left">
+                            <legend>
+                                Welcome JOIN
+                            </legend>
+                            <p>
+                                <label for="name">
+                                    이름
+                                </label>
+                                <input type="text" id="name" maxlength="16" placeholder="NAME">
+                            </p>
+                            <p>
+                                <label for="id_txt">
+                                    id
+                                </label>
+                                <input type="text" id="id_txt" maxlength="16" placeholder="ID">
+                            </p>
+                            <p>
+                                <label for="pw_txt">
+                                    pw
+                                </label>
+                                <input type="password" id="pw_txt" maxlength="16" placeholder="PASSWORD">
+                            </p>
+                            <p>
+                                <label for="pw_txt">pw</label>
+                                <input type="password" id="pw_txt" maxlength="16" placeholder="PASSWORD CHECK">
+
+                            </p>
+                        </div>
+                        <div class="j_right">
+                            <p>
+                                <label for="address">주소</label>
+                                <input type="text" id="address" maxlength="6" placeholder="우편번호" class="n_address">
+                                <input type="button" id="search" value="주소검색"></p>
+                            <p>
+                                <input type="text" id="address">
+                            </p>
+                            <p>
+                                <input type="text" id="address" placeholder="상세주소">
+                            </p>
+                            <p class="j_txt1">생년월일 &nbsp; &#124; &nbsp; 선택입력사항<br>
+                                <span class="j_txt">매년 생일기념 30&percnt; 할인쿠폰이 지급됩니다</span>
+                            </p>
+                            <p>
+                                <label for="birth">생년월일</label>
+                                <input type="text" id="birth" maxlength="6" placeholder="년월일 6자리 ex)801111">
+                            </p>
+                        </div>
+                    </fieldset>
+                    <div class="agree">
+                        <p><input type="checkbox" value="동의" id="ok1"><label for="ok1">회원약관에 동의합니다.</label>
+                            <a href="sub.html" title="상세약관보기" class="bt">약관보기</a>
+                        </p>
+                        <p><input type="checkbox" value="동의" id="ok2"><label for="ok2">개인정보처리방침에 동의합니다.</label>
+                            <a href="sub.html" title="상세약관보기" class="bt">약관보기</a>
+                        </p>
+                        <p>
+                            <input type="checkbox" value="동의" id="ok3"><label for="ok3">모두 동의합니다</label>
+                        </p>
+                    </div>
+                    <P>
+                        <input type="button" id="join_btn" value="회원가입하기" onclick="id_pw_check();">
+                    </p>
+                </section>
+            </main>
+            <!-- 푸터 -->
+            <footer>
+                <div id="foot">
+                    <h2>
+                        <a href="index.html" title="메인페이지로바로가기"><img src="./image/main/logo.png" alt="뚜레쥬르로고"></a>
+                    </h2>
+                    <nav>
+                        <ul class="f_lnb1">
+                            <li>
+                                <a href="sub.html" title="회사소개">회사소개</a>
+                            </li>
+                            <li>
+                                <a href="https://www.tlj.co.kr:7008/recruit/recruit_index.asp" title="채용안내">채용안내</a>
+                            </li>
+                            <li>
+                                <a href="sub.html" title="이용약관">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="sub.html" title="창업안내">창업안내</a>
+                            </li>
+                        </ul>
+                        <ul class="f_lnb2">
+                            <li>
+                                <a href="sub.html" title="개인정보처리방침">개인정보처리방침</a>
+                            </li>
+                            <li>
+                                <a href="sub.html" title="이메일무단수집거부">이메일무단수집거부</a>
+                            </li>
+                            <li>
+                                <a href="sub.html" title="윤리신고센터">윤리신고센터</a>
+                            </li>
+                            <li>
+                                <a href="sub.html" title="법적고지">법적고지</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="f_right">
+                        <ul class="sns">
+                            <li>
+                                <a href="https://www.instagram.com/touslesjours_kr/" title="뚜쥬 인스타그램 바로가기"><img src="./image/icon/icon_i.png" alt="인스타아이콘" class="sns_i"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/touslesjourskr/featured" title="당사유튜브바로가기"><img src="./image/icon/icon_y.png" alt="유튜브 아이콘" class="sns_i"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/TOUSlesJOURS" title="당사페이스북바로가기"><img src="./image/icon/ico_f.png" alt="페이스북아이콘"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/cjtlj" title="뚜쥬 트위터 바로가기"><img src="./image/icon/ico_t.png" alt="트위터아이콘"></a>
+                            </li>
+                        </ul>
+                        <select class="f_site" onchange="siteUrl(this)">
+                            <option>Family Site</option>
+                            <option value="https://www.cjfoodville.co.kr/main.asp">CJ 푸드빌</option>
+                            <option value="https://www.ivips.co.kr:7002/">VIPS</option>
+                            <option value="https://www.italiantheplace.co.kr:7022/">THE PLACE</option>
+                            <option value="https://www.cheiljemyunso.co.kr:7014/">제일제면소</option>
+                        </select>
+                    </div>
+                </div>
+                <address>
+                    <p class="call">
+                        <a href="tel:01076789377" title="전화걸기">
+                            <i class="fas fa-phone-volume"></i>
+                            고객센터&#58;1577&#45;0000</a>
+                    </p>
+                    <p>상호명&#58;CJ푸드빌&#40;주&#41; 주소&#58;&#40;우&#41;04555 서울시 중구 마른내로 00 CJ푸드빌㈜</p>
+                    <p>사업자등록번호&#58;312&#45;81&#45;00000 대표이사&#58;000 개인정보보호책임자&#58;000 대표 이메일&#58;a24055113&#64;practice.net</p>
+                    <p>COPYRIGHT 2021&copy;CJ Foodville ALL RIGHT RESERVED.</p>
+                </address>
+                <aside>
+                    <a href="#" title="맨위로 바로가기">
+                        <i class="fas fa-angle-up"></i>
+                    </a>
+                    <a href="#tap2" title="신메뉴-순식빵소개"></a>
+                    <a href="#tap3" title="브랜드스토리"></a>
+                    <a href="#tap4" title="케이크예약"></a>
+                    <a href="#tap5" title="프로모션"></a>
+                    <a href="#tap6" title="즐겨찾는메뉴"></a>
+                    <a href="#tap7" title="메인하단으로이동">
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                </aside>
+            </footer>
+            <script>
+                function siteUrl(a) { // 사용자가 select태그에서 option을 선택하면 값을 전달받는다
+                    if (a.value != 'none') { // 만약 사용자가선택목록을 선택하였을 때 아래 내용을 실행
+                        window.open(a.value, '', 'width=600, height=800'); // 사이트 연결을 실행
+                        a.value = 'none'; // 값을초기화
+                    } else { // 그렇지않으면
+                        return; // 실행하지않는다
+                    }
+                }
+            </script>
+        </body>
+</html>

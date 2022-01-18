@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*
+http://rahyeri.dothome.co.kr/food의 레이아웃css입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+
+    text-align: center;
+    background-color: #003d30;
+    box-sizing: border-box;
+}
+
+header a {
+    color: #fff;
+}
+
+
+main {
+    clear: both;
+}
+
+/* 메인공통 */
+.fa-ellipsis-v {
+    float: right;
+    padding: 10px;
+}
+
+.fa-bookmark {
+    float: right;
+    padding-right: 20px;
+    padding-top: 3px;
+
+}
+
+.icons {
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+
+}
+
+.s_ins>.ins>.ins_t {
+    width: 90%;
+    line-height: 40px;
+    padding-left: 10px;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* 푸터공통 */
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    clear: both;
+    box-sizing: border-box;
+    background-color: #003d30;
+}

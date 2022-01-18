@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>건강한 빵을 생각하는 뚜레쥬르입니다</title>
+        <link rel="shortcut icon" type="./image/x-icon" href="./image/icon/pico.ico">
+        <!-- 리셋 -->
+        <link
+        href="./css/reset.css" rel="stylesheet" type="text/css">
+        <!-- 베이스 -->
+        <link
+        href="./css/base.css" rel="stylesheet" type="text/css">
+        <!-- 레이아웃-->
+        <link
+        href="./css/layout.css" rel="stylesheet" type="text/css">
+        <!-- 피씨 -->
+        <link
+        href="./css/pc.css" rel="stylesheet" type="text/css">
+        <!-- 타블렛 -->
+        <link
+        href="./css/tablet.css" rel="stylesheet" type="text/css">
+        <!-- 모바일 -->
+        <link
+        href="./css/mobile.css" rel="stylesheet" type="text/css">
+        <!-- 스와이퍼 -->
+        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+        <link
+        href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+        <!-- 아이콘폰트 -->
+        <link
+        href="./css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- 나눔스퀘어 -->
+        <link
+        rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+        <!-- 애니메이션  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <style>
+            .main_slide .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .main_slide {
+                position: relative;
+                width: 100%;
+                height: 750px;
+                object-fit: cover;
+            }
+            .main_slide .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                position: relative;
+            }
+            .main_slide .swiper-slide a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .main_slide .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                color: #fff;
+                font-size: 3rem;
+            }
+            .main_slide .swiper-pagination-bullet {
+                transform: translateY(10px);
+                width: 12px;
+                height: 12px;
+                background: transparent;
+                border: 1px solid rgb(250, 250, 250);
+                opacity: 1;
+            }
+            .main_slide .swiper-pagination-bullet-active {
+                width: 40px;
+                transition: width 0.5s;
+                border-radius: 5px;
+                background: rgb(255, 255, 255);
+                border: 1px solid transparent;
+            }
+            .slide_txt2 {
+                cursor: pointer;
+            }
+
+            /* 슬라이드222 */
+            .mySwiper {
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                position: relative;
+            }
+            .s_ins {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .ins {
+                box-sizing: border-box;
+                /* text-align: center; */
+                background: #fff;
+                text-align: start;
+                height: 550px !important;
+                /* min-width: 200px !important; */
+                width: 340px !important;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+
+            }
+
+            .ins .ins_img {
+                margin-bottom: 30px;
+                display: block;
+                width: 100%;
+                transform: translateY(-33px);
+                cursor: pointer;
+            }
+            .s_ins > .ins .ins_timg {
+                width: 25px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+            .swiper-pagination-bullet {
+                transform: translateY(10px);
+                width: 12px;
+                height: 12px;
+                background: transparent;
+                border: 1px solid pink;
+                opacity: 1;
+            }
+            .swiper-pagination-bullet-active {
+                width: 40px;
+                transition: width 0.5s;
+                border-radius: 5px;
+                background: pink;
+                border: 1px solid transparent;
+            }
+            #ins_last {
+                opacity: 0;
+            }
+        </style>
+        <!-- 스와이퍼스크립트 -->
+        <script src="./script/prefixfree.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="./script/swiper.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- 헤더 -->
+        <header>
+            <input type="checkbox" id="toggle">
+            <div id="h_top">
+                <nav>
+                    <ul class="nav_top">
+                        <li>
+                            <fieldset>
+                                <legend>검색폼</legend>
+                                <input type="text" id="s_box" placeholder=" 메뉴명 or 매장명"><span class="none">검색창</span>
+                                <label for="s_box">
+                                    <i class="fas fa-search"></i>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <a href="sub.html" title="기사채용안내">기사채용안내</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav_top2">
+                        <li>
+                            <a href="sub.html" title="창업안내">창업안내</a>
+                        </li>
+                        <li>
+                            <a href="sub.html" title="매장안내">매장안내</a>
+                        </li>
+                        <li>
+                            <a href="login.html" title="로그인">로그인</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="h_bottom">
+                <h1>
+                    <a href="index.html"><img src="./image/main/logo.png" alt="메인로고"></a>
+                </h1>
+                <label for="toggle">
+                    <span class="none">검색창</span>
+                    <i class="fas fa-bars"></i>
+                </label>
+                <nav class="gnb">
+                    <label for="toggle">
+                        <span class="none">검색창</span>
+                        <i class="fas fa-times"></i>
+                    </label>
+                    <ul>
+                        <li>
+                            <label for="sub01">
+                                브랜드스토리
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub01">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="뚜레쥬르 소개">ABOUT 뚜레쥬르
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="새로워진뚜레쥬르">새로워진 뚜레쥬르</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="글로벌 뚜레쥬르">글로벌 뚜레쥬르</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="착한 빵 캠페인">착한 빵 캠페인</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="뉴스&공지사항">뉴스&amp;공지사항</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub02">
+                                제품안내
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub02">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub_new.html" title="신메뉴">신메뉴</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="빵">빵</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="케이크">케이크</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="델리">델리</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="선물">선물</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="디저트&amp;음료">디저트&amp;음료</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub03">
+                                이벤트&amp;멤버십
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub03">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="진행중인 이벤트">진행중인 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="이벤트 당첨자">이벤트 당첨자</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="CJ 멤버십">CJ 멤버십</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="제휴 혜택">제휴 혜택</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub04">
+                                케이크 예약 서비스
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub04">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="예약&amp;픽업서비스">예약&amp;픽업서비스</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="케이크 배달신청">케이크 배달신청</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for="sub05">
+                                고객센터
+                                <i class="fas fa-angle-down"></i>
+                            </label>
+                            <input type="checkbox" id="sub05">
+                            <ul class="sub">
+                                <li>
+                                    <a href="sub.html" title="이메일로문의하기">1&#58;1문의</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="창업안내">창업안내</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="매장안내">매장안내</a>
+                                </li>
+                                <li>
+                                    <a href="sub.html" title="기사 채용안내">기사 채용안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 타블렛 내비용 -->
+                    <div class="sns_icon">
+                        <a href="about.html" title="인스타그램 바로가기">
+                            <i class="fab fa-instagram">
+                                <span class="none">인스타</span>
+                            </i>
+                        </a>
+                        <a href="about.html" title="페이스북 바로가기">
+                            <i class="fab fa-facebook">
+                                <span class="none">페이스북</span>
+                            </i>
+                        </a>
+                        <a href="about.html" title="트위터 바로가기">
+                            <i class="fab fa-twitter">
+                                <span class="none">트위터</span>
+                            </i>
+                        </a>
+                        <a href="login.html" title="로그인">LOGIN</a>
+                        <fieldset class="nav_s">
+                            <legend>검색폼</legend>
+                            <input type="text" id="nav_s" placeholder=" 메뉴명 or 매장명"><label for="nav_s">
+                                <span class="none">검색창</span>
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </fieldset>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- 메인 -->
+        <main>
+            <section>
+                <h6>메인이미지슬라이드</h6>
+                <div class="swiper-container main_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h3 class="slide_txt">
+                                <span id="slide_t01">건강한</span>
+                                데일리 베이커리
+                                <br>
+                                &#95;
+                                <br>
+                                <span class="slide_txt2" onclick="window.open('index.html','_self');">하나 &#46; 매일 아침 매장에서 구운 빵들만 판매합니다&#46;
+                                    <br><span id="slide_t02">둘 &#46; 자연의 순수함을 간직한 재료들을</span>
+                                    선별하여 사용합니다&#46;<br>셋&#46; 맛있지만 자극적이지 않은 건강한 빵 뚜레쥬르의 원칙입니다
+                                </span>
+                            </h3>
+                            <a href="index.html" title="브랜드스토리보러가기"><img src="./image/main/main3.jpg" alt="빵재료이미지"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide_txt chris1">
+                                <img src="./image/main/main3_t.png" alt="메리크리스마스글자이미지">
+                            </div>
+                            <div class="slide_txt chris2">
+                                <img src="./image/main/main3_logo.png" alt="뚜레쥬르글자이미지">
+                            </div>
+                            <div class="slide_txt chris3">
+                                <a href="#" title="상세페이지이동"><img src="./image/main/main3_item.png" alt="케이크이미지"></a>
+                            </div>
+                            <img src="./image/main/main.png" alt="메인2"></div>
+                        <div class="swiper-slide rasberry" style="background:url(./image/main/main1.png) center center / cover;">
+                            <div class="slide_txt ras">
+                                <a href="#" title="상세페이지이동"><img src="./image/main/main1-txt.png" alt="라즈베리샌드타이틀이미지"></a>
+                            </div>
+                            <div class="slide_txt ras1">
+                                <a href="#" title="상세페이지이동"><img src="./image/main/main1-txt2.png" alt="상큼라즈베리크림샌드설명이미지"></a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- 섹션1  신메뉴 순식빵 소개-->
+        <section id="tap2">
+            <h6>추천메뉴</h6>
+            <article class="s_1">
+                <h3>
+                    <span id="s1_t01">오랜시간 정성들여 잘 만든</span>
+                    뚜레쥬르
+                    <span id="new">NEW</span>
+                    시그니처 메뉴
+                    <BR>
+                    <span class="s_1title">순&#44; 식빵</span>
+                </h3>
+                <ul>
+                    <li>
+                        <a href="sub_new.html" title="상세페이지보러가기"><img src="./image/main/new.png" alt="순식빵">순&#44;식빵 &#40;대&#41;<p>온 가족 아침 대용으로 안성맞춤</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sub_new.html" title="상세페이지보러가기"><img src="./image/main/new1.png" alt="순식빵">순&#44;식빵 &#40;중&#41;<p>2&#126;3인 가족에 제격&#33;</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sub_new.html" title="상세페이지보러가기"><img src="./image/main/new2.png" alt="순식빵">순&#44;식빵 &#40;소&#41;<p>1인 가구를 위한 미니 사이즈</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="sub_new.html" class="btn s1_plus">순&#44; 시리즈 더보기</a>
+
+            </article>
+        </section>
+        <!-- 섹션2 브랜드스토리-->
+        <section id="tap3">
+            <h6>브랜드스토리</h6>
+            <article class="s_2">
+                <h3>
+                    <span class="s_2title">Brand Story</span>
+                    자연주의 베이커리의 시작</h3>
+                <p>매일매일&#40;Tous Les Jours&#41;&#44;<br>매장에서 직접 굽는 신선한 베이커리</p>
+                <a href="sub.html" title="자세히보기" class="btn s2_1">자세히보기</a>
+            </article>
+        </section>
+        <!-- 섹션3 케이크예약-->
+        <section id="tap4">
+            <h6>케이크 신청</h6>
+            <article class="s_3">
+                <h3>
+                    <span class="s_3title">Cake</span>
+                    with
+                    <span class="s_3title">L&#46;O&#46;V&#46;E</span><br>
+                    행복한 날엔 특별한 케이크와 함께<br>
+                    <a href="sub.html" title="예약&픽업서비스" class="btn s3_1">예약&#38;픽업 서비스</a>
+                    <a href="sub.html" title="케이크배달신청" class="btn s3_2">케이크 배달신청하기</a>
+                </h3>
+
+            </article>
+        </section>
+        <!-- 섹션4 프로모션  -->
+        <!-- 섹션4 -->
+        <section class="s_4" id="tap5">
+
+            <div id="popup">
+                <span onclick="hide()">
+                    <i class="fas fa-close"></i>
+                </span>
+                <div id="pop"><img src="./image/main/pr1.jpg" alt="프로모션이미지">
+                    <hr>
+                    <p id="pop_txt">
+                        안녕하세요 프로모션 페이지 입니다</p>
+                    <p id="pop_txt2">
+                        &#42;상기 이벤트는 내부사정에 의해 조기종료 될 수 있습니다.</p>
+                    <a href="sub.html" title="진행중 프로모션 전체보기" class="pro_plus">전체 프로모션 살펴보기</a>
+                </div>
+            </div>
+
+
+            <h3>
+                <a href="sub.html" title="진행중인 이벤트 전체보기"><img src="./image/icon/icon_event.jpg" alt="이벤트아이콘" class="event_t">
+                    EVENT
+                </a>
+                <a href="sub.html" title="진행중인 이벤트 전체보기" class="event_hide">전체보기
+                    <i class="	far fa-heart"></i>
+                </a>
+            </h3>
+            <article class="s4_1">
+                <h6>프로모션</h6>
+                <ul>
+                    <li id="border_1"><img src="./image/main/p1.jpg" alt="콜라보제품" onclick="banner(1)"></li>
+                    <li id="border_2"><img src="./image/main/p2.jpg" alt="콜라보제품" onclick="banner(2)"></li>
+                    <li id="border_3"><img src="./image/main/p3.jpg" alt="콜라보제품" onclick="banner(3)"></li>
+                    <li id="border_4"><img src="./image/main/p4.jpg" alt="콜라보제품" onclick="banner(4)"></li>
+                </ul>
+                <div class="s4_col">
+                    <p>뚜쥬라서 가능해&starf;신박한&starf;콜라보레이션</p>
+                </div>
+
+                <div id="s4_box">
+                    <div>
+                        <a href="sub.html" title="한정판 콜라보제품 전상품 보러가기" class="col_txt">
+                            <i class="fas fa-plus"></i>두근두근 한정판 콜라보제품 보러가기</a>
+                    </div>
+                    <img src="./image/main/p1.jpg" alt="콜라보제품이미지" id="collabo">
+                </div>
+            </article>
+
+            <article class="s4_2">
+                <h6>프로모션</h6>
+                <ul>
+                    <li onclick="show(1)">
+                        <p>11월&#44; T멤버십 VIP회원 매일 꽃피는 T Day
+                        </p>
+                        <span class="img_case"><img src="./image/main/pr1.jpg" alt="T멤버십 VIP회원 할인 이벤트"></span>
+                    </li>
+                    <li onclick="show(2)">
+                        <span class="img_case"><img src="./image/main/pr2.jpg" alt="티켓증정이벤트"></span>
+                        <p>티켓은 내가 줄게 &#33; 영화는 누가 볼래&#63;
+                        </p>
+                    </li>
+                    <li onclick="show(3)">
+                        <p>&#39;순식빵&#39; 구매할 때마다 개당 300포인트 적립</p>
+                        <span class="img_case"><img src="./image/main/pr3.jpg" alt="순식빵 포인트 적립 이벤트"></span>
+                    </li>
+                    <li onclick="show(4)">
+                        <span class="img_case"><img src="./image/main/pr4.jpg" alt="kt 멤버십 더블할인 이벤트"></span>
+                        <p>KT 멤버십 뚜쥬 전제품 최대 30&#37; 더블콤보
+                        </p>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!--섹션 insta-->
+        <section class="instagram" id="tap6">
+            <h3>
+                <a href="https://www.instagram.com/touslesjours_kr/?hl=ko" title="인스타그램"><img src="./image/main/i_icon.png" alt="인스타그램아이콘" class="ins_icon">
+                    Instagram
+                </a>
+                <a href="sub.html" title="진행중인 이벤트 전체보기" class="event_hide">
+                    인스타로 GO
+                    <i class="	far fa-heart"></i>
+                </a>
+            </h3>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper s_ins">
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CWR5doXsHHK/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 77개</p>
+                            <p class="ins_txt1">만점&#33;💯 너란 점수 참 쉽다…&#33;<br><q>정답 줍는 우리들</q>
+                                먹고 같이 만점 주워보자구&#126;&#33;</p>
+                            <p class="ins_txt2">&#35;수능&#35;정답줍는우리들&#35;찹쌀떡</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins1.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CWH4ArEgg6t/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 295개</p>
+                            <p class="ins_txt1">빼빼로데이를 맞아<br>너에게 보내는 편지💌</p>
+                            <p class="ins_txt2">&#35;초코퐁당코르네 &#35;스위트바통쉬크레 &#35;다크초코트위스트</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins2.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CWHz4jFMAx_/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 595개</p>
+                            <p class="ins_txt1">얼마 남지 않은 시험&#33;<br>빵 로스 빵식이가 알려주는
+                                    수능 시험 꿀팁 체크하자📖</p>
+                            <p class="ins_txt2">&#35;뚜쥬갤러리 &#35;수능 &#35;수능선물</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins3.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CWCqpl9PNbc/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 486개</p>
+                            <p class="ins_txt1">바로&#44; 그 어떤 시험이라도📄<br>
+                                합격의 기운만을 전해준다는
+                                    찰떡 귀걸이를 한 합격생&#33;</p>
+                            <p class="ins_txt2">&#35;수능선물 &#35;수능선물세트
+                                    &#35;찰떡귀걸이를한소녀</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins4.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CVPJCgwJQjx/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 1308개</p>
+                            <p class="ins_txt1">순&#44;식빵 게임에<br>참가하시겠습니까&#63;💀</p>
+                            <p class="ins_txt2">&#35;순식빵게임 &#35;순식빵빙고 &#35;게임</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins">
+                        <span class="ins_t" onclick="location.href='https://www.instagram.com/touslesjours_kr/?hl=ko';"><img src="./image/main/ins_t.jpg" alt="인스타프로필" class="ins_timg">
+                            &nbsp;touslesjours_kr<i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <img src="./image/main/ins5.jpg" alt="insta" class="ins_img" onclick="location.href='https://www.instagram.com/p/CVSP1sKsC4a/?utm_source=ig_web_copy_link';">
+                        <div class="ins_txt">
+                            <span class="icons left1">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                            </span>
+                            <span class="icons right1">
+                                <i class="far fa-bookmark"></i>
+                            </span>
+                            <p>좋아요 308개</p>
+                            <p class="ins_txt1">10 &#47;30 공인중개사 시험💯🖋<br>뚜레쥬르가 예비 공인중개사 분들을 합격의 전당으로 초대합니다.</p>
+                            <p class="ins_txt2">&#35;공인중개사 &#35;합격 &#35;응원 &#35;선물</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ins" id="ins_last"></div>
+                    <div class="swiper-slide ins" id="ins_last2"></div>
+                </div>
+                <div class="swiper-pagination ins_page"></div>
+            </div>
+
+        </section>
+
+        <!-- 섹션5 즐겨찾는 메뉴  -->
+        <section class="s_5" id="tap7">
+            <h3>
+                <span class="s5_title">with</span>
+                Tous les Jours</h3>
+            <article class="s5_1">
+                <h6>
+                    <a href="https://www.tlj.co.kr:7008/store/search.asp" title="매장안내페이지로 이동">매장안내</a>
+                </h6>
+                <div id="s5_box">
+                    <h4>
+                        <a href="https://www.tlj.co.kr:7008/store/search.asp" title="매장안내페이지로 이동">매장안내</a>
+                    </h4>
+                    <fieldset>
+                        <legend>검색폼</legend>
+                        <input type="text" id="search2" placeholder="지역 또는 매장명을 입력하세요"><label for="search2">
+                            <span class="none">검색창</span>
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </fieldset>
+                </div>
+                <a href="https://www.tlj.co.kr:7008/store/search.asp" title="매장안내페이지로 이동"><img src="./image/main/s5_2.png" alt="뚜레쥬르로고" class="s5_1img"></a>
+                <a href="sub.html" title="매장안내 바로가기" class="s5_plus">더보기<i class="	fas fa-angle-double-right"></i>
+                </a>
+            </article>
+            <article class="s5_2" onclick="location.href='https://www.tlj.co.kr:7008/franchise/index.asp';">
+                <h6>중요메뉴</h6>
+                <div id="s5_box2">
+                    <h4>
+                        <a href="https://www.tlj.co.kr:7008/franchise/index.asp" title="창업안내 이동">가맹점 창업안내</a>
+                        <br>
+                        &#x2015;<br>
+                        <span class="s5_p">뚜레쥬르와 함께할 점주님을 찾습니다</span>
+                    </h4>
+                </div>
+                <a href="sub.html" title="창업안내 바로가기" class="s5_plus">더보기<i class="	fas fa-angle-double-right"></i>
+                </a>
+            </article>
+            <article class="s5_3">
+                <h4>
+                    <a href="https://www.tlj.co.kr:7008/community/news/list.asp" title="뉴스및공지사항 게시판 이동">뉴스 &#63; 공지사항 안내</a>
+                    <a href="https://www.tlj.co.kr:7008/community/news/list.asp" title="더보기" class="btn_plus">
+                        <span class="none">더보기</span>
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </h4>
+                <ul class="news">
+                    <li>
+                        <a href="sub.html" title="상세내용 보러가기">CJ회원 개인정보취급약관 갱신 공지<span class="date">2021&#46;11&#46;09</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="상세내용 보러가기">9월 진행된 요기요 프로모션 당첨자 발표 안내<span class="date">2021&#46;10&#46;26</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="상세내용 보러가기">CJ회원 개인정보취급약관 갱신 공지<span class="date">2021&#46;09&#46;28</span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article class="s5_4" onclick="location.href='https://www.tlj.co.kr:7008/recruit/recruit_index.asp';">
+                <div id="s5_box4">
+                    <h4>
+                        <span class="s5_title">기사 채용안내</span><br>
+                        <span class="s5_p">
+                            &#x2015;<br>
+                            당신을 응원합니다</span>
+                    </h4>
+                </div>
+                <a href="sub.html" title="매장안내 바로가기" class="s5_plus">더보기<i class="	fas fa-angle-double-right"></i>
+                </a>
+            </article>
+            <a href="#" title="맨위로 바로가기" class="btn_top">
+                <i class="far fa-arrow-alt-circle-up"></i>
+                <span>BACK TO TOP</span>
+            </a>
+        </section>
+       </main>
+       <!-- 모달창 -->
+       <div id="modal">
+		<a href="#" title="닫기" onclick="hiDe();"><i class="fas fa-window-close"></i></a>
+		<img src="./image/main/modal.jpg" alt="사이트용도안내이미지">
+		<p>본사이트는상업적용도가아닌<br>개인포트폴리오용가상사이트입니다<br>출처를밝히지못한이미지가포함되어있습니다</p>
+	</div>
+        <!-- 푸터 -->
+        <footer>
+        <div id="foot">
+            <h2>
+                <a href="index.html" title="메인페이지로바로가기"><img src="./image/main/logo.png" alt="뚜레쥬르로고"></a>
+            </h2>
+            <nav>
+                <ul class="f_lnb1">
+                    <li>
+                        <a href="sub.html" title="회사소개">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="https://www.tlj.co.kr:7008/recruit/recruit_index.asp" title="채용안내">채용안내</a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="이용약관">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="창업안내">창업안내</a>
+                    </li>
+                </ul>
+                <ul class="f_lnb2">
+                    <li>
+                        <a href="sub.html" title="개인정보처리방침">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="이메일무단수집거부">이메일무단수집거부</a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="윤리신고센터">윤리신고센터</a>
+                    </li>
+                    <li>
+                        <a href="sub.html" title="법적고지">법적고지</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="f_right">
+                <ul class="sns">
+                    <li>
+                        <a href="https://www.instagram.com/touslesjours_kr/" title="뚜쥬 인스타그램 바로가기"><img src="./image/icon/icon_i.png" alt="인스타아이콘" class="sns_i"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/touslesjourskr/featured" title="당사유튜브바로가기"><img src="./image/icon/icon_y.png" alt="유튜브 아이콘" class="sns_i"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/TOUSlesJOURS" title="당사페이스북바로가기"><img src="./image/icon/ico_f.png" alt="페이스북아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/cjtlj" title="뚜쥬 트위터 바로가기"><img src="./image/icon/ico_t.png" alt="트위터아이콘"></a>
+                    </li>
+                </ul>
+                <label for="family">패밀리사이트</label>
+                <select class="f_site" onchange="siteUrl(this)" id="family">
+                    <option>Family Site</option>
+                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ 푸드빌</option>
+                    <option value="https://www.ivips.co.kr:7002/">VIPS</option>
+                    <option value="https://www.italiantheplace.co.kr:7022/">THE PLACE</option>
+                    <option value="https://www.cheiljemyunso.co.kr:7014/">제일제면소</option>
+                </select>
+            </div>
+        </div>
+        <address>
+            <p class="call">
+                <a href="tel:01076789377" title="전화걸기">
+                    <i class="fas fa-phone-volume"></i>
+                    고객센터&#58;1577&#45;0000</a>
+            </p>
+            <p>상호명&#58;CJ푸드빌&#40;주&#41;
+                                        주소&#58;&#40;우&#41;04555 서울시 중구 마른내로 00 CJ푸드빌㈜</p>
+            <p>사업자등록번호&#58;312&#45;81&#45;00000 대표이사&#58;000 개인정보보호책임자&#58;000 대표 이메일&#58;a24055113&#64;practice.net</p>
+            <p>COPYRIGHT 2021&copy;CJ Foodville ALL RIGHT RESERVED.</p>
+        </address>
+        <aside>
+            <a href="#" title="맨위로 바로가기">
+                <span class="none">맨위로바로가기</span>
+                <i class="fas fa-angle-up"></i>
+            </a>
+            <a href="#tap2" title="신메뉴-순식빵소개">
+                <span class="none">신메뉴-순식빵소개</span>
+            </a>
+            <a href="#tap3" title="브랜드스토리">
+                <span class="none">브랜드스토리</span>
+            </a>
+            <a href="#tap4" title="케이크예약">
+                <span class="none">케이크예약</span>
+            </a>
+            <a href="#tap5" title="프로모션">
+                <span class="none">프로모션</span>
+            </a>
+            <a href="#tap6" title="즐겨찾는메뉴">
+                <span class="none">즐겨찾는메뉴</span>
+            </a>
+            <a href="#tap7" title="메인하단으로이동">
+                <span class="none">메인하단으로이동</span>
+                <i class="fas fa-angle-down"></i>
+            </a>
+        </aside>
+        </footer>
+
+        <!-- Initialize Swiper -->
+        <script>
+        var swiper = new Swiper(".main_slide", {
+            effect: "fade",
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            speed: 2500,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+
+            breakpoints: {
+                200: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                },
+                1025: {
+                    slidesPerView: 4,
+                    spaceBetween: 50
+                }
+            }
+        });
+
+
+        // 프로모션 1 클릭시 이미지변경
+        function banner(url) {
+            let imgUrl = './image/main/p1.jpg';
+            imgUrl = imgUrl.replace('1', url); // 1자리에 클릭시 banner(url변수)을 대입한다
+
+            document.getElementById('collabo').src = imgUrl;
+
+            document.getElementById('border_' + url).style.border = "2px solid #ffc8c8";
+        }
+
+        // 프로모션2 보이기 숨기기
+        function show(ttti) {
+            let food = new Array();
+            food[0] = '안녕하세요';
+            food[1] = 'T멤버십 VIP에게 주어지는 특별한 할인혜택<br>11월 한달동안 1000원당 500원 할인';
+            food[2] = '3만원 이상 구매하면 공짜티켓 득.템. <br> 매장직원에게 모바일 영화티켓을 요청하세요';
+            food[3] = '매일 먹어도 질리지 않는 순~식빵 <br> 개수 상관없이 무조건 개당 300포인트 적립';
+            food[4] = 'KT 멤버십 회원이라면 전 제품 최대 30&#37; 할인 <br> 횟수 제한없이 몇 번을 가도 할인가능~!!';
+
+            let Url = '"./image/main/pr1.jpg"';
+            Url = Url.replace('1', ttti); // 1자리에 클릭시 banner(url변수)을 대입한다
+            let tttb = food[ttti];
+            tttb = tttb.replace('1', ttti);
+            document.getElementById('pop').innerHTML = '<img src=' + Url + 'alt=""><hr><p id="pop_txt">' + tttb + '</p><p id="pop_txt2"> &#42;상기 이벤트는 내부사정에 의해 조기종료 될 수 있습니다.</p><a href="sub.html" title="진행중 프로모션 전체보기" class="pro_plus">전체 프로모션 살펴보기</a>';
+
+            document.getElementById('popup').style.display = 'block';
+            // document.getElementById('pop').innerHTML = '<p id="pop_txt">'+tttb+'</p>';
+            // let text = array['1','1','1','1','1'];
+            // document.getElementById('pop_txt').innerHTML=text[ttti];
+
+        }
+        /* let Url = '"./images/pr1.jpg"';
+                변수에 저장되어있는 값을 사용자가 클릭하여 전달한 값으로 변경하도록 replace 이용하기
+                Url = Url.replace('1', url);
+                console.log(Url);
+                document.getElementById('pop').innerHTML = '<img src='+Url+'alt="">';
+                document.getElementById('photo').src=imgUrl;*/
+        function hide() {
+            let p = document.getElementById('popup');
+            p.style.display = 'none';
+        }
+        function hiDe() {
+            let m = document.getElementById('modal');
+            m.style.display = 'none';
+        }
+
+        function siteUrl(a) { // 사용자가 select태그에서 option을 선택하면 값을 전달받는다
+            if (a.value != 'none') { // 만약 사용자가선택목록을 선택하였을 때 아래 내용을 실행
+                window.open(a.value, ''); // 사이트 연결을 실행 ''블랭크 새탭 / _self는 보는창이동
+                a.value = 'none'; // 값을초기화
+            } else { // 그렇지않으면
+                return; // 실행하지않는다
+            }
+        }
+        </script>
+    </body>
+</html>

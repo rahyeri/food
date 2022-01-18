@@ -1,0 +1,318 @@
+/*
+http://rahyeri.dothome.co.kr/food의 회원가입css입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+@charset "utf-8";
+
+
+aside {
+  display: none;
+}
+
+@media screen and (min-width:1025px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .agree {
+    display: none;
+  }
+
+  /* 메인 */
+  section {
+    width: 100%;
+    /* background-color:#cacaff; */
+    max-width: 1200px;
+    height: fit-content;
+    margin: 100px auto;
+    text-align: center;
+    vertical-align: text-bottom;
+    color: #fff;
+  }
+
+  .join_t {
+    font-size: 40px;
+    width: 50%;
+    margin: 0px auto 100px auto;
+    color: #333;
+
+  }
+
+  .txt {
+    width: 800px;
+    height: 160px;
+    margin: 10px auto;
+
+  }
+
+  iframe {
+    border: 1px solid #ccc;
+    height: 150px;
+    width: 100%;
+  }
+
+  .button {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+    transform: translateX(270px);
+    cursor: pointer;
+  }
+
+  .b1 {
+    background-color: #919191;
+  }
+
+  .b2 {
+    background-color: #005c00;
+  }
+
+  /* 양식 */
+  .join_field {
+    width: 60%;
+    height: fit-content;
+    /* background-color:#48cc65; */
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+  }
+
+  .join_field label {
+    display: none;
+  }
+
+  .join_field legend {
+    font-size: 20px;
+    margin: 30px 0px;
+    color: #333;
+    font-weight: bold;
+
+  }
+
+  .join_field p {
+    display: inline-block;
+    color: #333;
+  }
+
+  input {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    outline: none;
+  }
+
+  input[type=button] {
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .j_left {
+    width: 50%;
+    border: none;
+    /* margin-left:80px; */
+
+  }
+
+  .j_right {
+    width: 50%;
+
+    border: none;
+    transform: translateY(73px);
+  }
+
+  #address {
+    margin-bottom: 10px;
+
+  }
+
+  .n_address {
+    width: 90px;
+  }
+
+  #search {
+    width: 60px;
+    margin-left: 44px;
+    margin-bottom: 10px;
+  }
+
+  .j_txt1 {
+    margin: 10px 0px 5px 0px;
+  }
+
+  .j_txt {
+    font-size: 10px;
+    line-height: 2;
+    color: #3147c7;
+    /* margin:30px 0px; */
+    display: block;
+
+  }
+
+  #join_btn {
+    margin: 0px auto;
+    background-color: #ff4d39;
+    color: #fff;
+    border: none;
+  }
+
+  /* 메인 */
+
+
+}
+
+@media screen and (max-width:1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+
+  /* 메인 */
+  section {
+    /* background-color:#cacaff; */
+    width: 100%;
+    height: fit-content;
+    margin: 50px auto;
+    text-align: center;
+    vertical-align: text-bottom;
+    color: #fff;
+  }
+
+  .join_t {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50%;
+    margin: 150px auto 30px auto;
+    color: #333;
+  }
+
+  .txt,
+  .button {
+    display: none
+  }
+
+  /* 양식 */
+  .join_field {
+    width: 100%;
+    height: fit-content;
+    /* background-color:#48cc65; */
+    margin: 20px auto 0px auto;
+    text-align: center;
+    /* display:flex; */
+  }
+
+  .join_field label {
+    display: none;
+  }
+
+  .join_field legend {
+    font-size: 26px;
+    margin: 20px auto;
+    color: #333;
+    font-weight: bold;
+
+  }
+
+  .join_field p {
+    display: inline-block;
+    color: #333;
+  }
+
+  input {
+    width: 200px;
+    height: 30px;
+    margin: 0px auto 25px auto;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    outline: none;
+
+  }
+
+  input[type=button] {
+    height: 35px;
+  }
+
+  .j_left {
+    max-width: 300px;
+    margin: 0px auto;
+    /* width:50%; */
+    border: none;
+    /* margin-left:80px; */
+
+  }
+
+  .j_right {
+    max-width: 300px;
+    margin: 0px auto;
+    border: none;
+    /* transform:translateY(73px); */
+  }
+
+  #address {
+    margin-bottom: 10px;
+
+  }
+
+  .n_address {
+    width: 90px;
+  }
+
+  #search {
+    width: 60px;
+    margin-left: 44px;
+    margin-bottom: 10px;
+  }
+
+  .j_txt1 {
+    margin: 10px 0px 5px 0px;
+  }
+
+  .j_txt {
+    font-size: 10px;
+    line-height: 2;
+    color: #3147c7;
+    /* margin:30px 0px; */
+    display: block;
+
+  }
+
+  .agree {
+    /* background-color:#c9a5a2; */
+    width: 100%;
+    width: 280px;
+    margin: 0px auto 40px auto;
+    color: #333;
+    text-align: left;
+  }
+
+  .agree>p input[type=checkbox] {
+    width: 15px;
+    padding: 0px;
+    margin: 0px 10px 0px 0px;
+    vertical-align: middle;
+  }
+
+  /* label[for=ok1]{} */
+  #join_btn {
+    margin: 0px auto 50px auto;
+    background-color: #ff4d39;
+    color: #fff;
+    border: none;
+  }
+
+  .bt {
+    background-color: #d18077;
+    color: #fff;
+    line-height: 15px;
+    float: right;
+    padding: 5px 8px;
+    transform: translateY(5px);
+  }
+
+  /* 메인 */
+
+}

@@ -1,0 +1,403 @@
+/*
+http://rahyeri.dothome.co.kr/food의 서브css입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+
+@charset "utf-8";
+/* 메인 */
+.visual {
+    width: 100%;
+    height: auto;
+}
+
+.visual img {
+    width: 100%;
+}
+
+#clum {
+    margin: 20px 0px 0px 100px;
+}
+
+#clum a {
+    color: #555555;
+}
+
+.fas.fa-angle-right {
+    color: #cccccc;
+}
+
+.i_best,
+.i_soon,
+.i_tang {
+    position: absolute;
+}
+
+.i_best {
+    width: 40px;
+    height: 40px;
+    z-index: 500;
+    background: rgb(230, 164, 22);
+    background: linear-gradient(120deg, rgb(255, 255, 239) 0%, rgb(255, 173, 79) 80%, rgb(250, 162, 0)100%);
+    border-radius: 50%;
+    color: rgb(85, 41, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+    top: 30px;
+    left: 5px;
+    text-align: center;
+}
+
+.i_soon {
+    top: 30px;
+    right: 0px;
+    z-index: 500;
+    width: 40px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+    background-color: #460000;
+    color: #fff;
+    text-align: center;
+}
+
+.i_tang {
+    top: 50px;
+    right: 0px;
+    z-index: 500;
+    width: 40px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+    background-color: #1f4400;
+    color: #fff;
+    text-align: center;
+}
+
+.best_w {
+    width: 100%;
+    height: 550px;
+    /* background-color:#ffe7e7; */
+}
+
+.best_w::after {
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-color: #fff4f4;
+    display: block;
+    transform: translateY(-100px);
+}
+
+.best {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.best>h3 {
+    font-size: 30px;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.good_txt {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 버튼 공통서식  */
+.button {
+    transform: translateY(200px);
+}
+
+.button>.btn {
+    font-size: 16px;
+    display: block;
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', 'MalgunGothic', sans-serif;
+    font-weight: normal;
+    transition: .3s;
+    text-align: center;
+}
+
+.button>.btn.left1 {
+    border: 1px solid #003d00;
+    color: #003d00;
+}
+
+.button>.btn.right1 {
+    background-color: #003d00;
+    color: #fff;
+}
+
+.button>.btn:hover {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.685);
+    color: rgb(255, 34, 34);
+    border: 1px solid rgb(255, 34, 34);
+    animation: swing;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* 버튼오버 공통서식*/
+    animation-iteration-count: infinite;
+}
+
+.items>h4 {
+    text-align: left;
+    font-size: 26px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.new_item {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    display: grid;
+    background-color: #ffffff;
+    padding: 20px 0px 100px 0px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.new_item>li {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+}
+
+.items img {
+    width: 100%;
+}
+
+.items .i_best {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 60px;
+    top: 20px;
+}
+
+.items .i_soon {
+    top: 0px;
+    right: 0px;
+    z-index: 500;
+    width: 50px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: #460000;
+    color: #fff;
+    text-align: center;
+}
+
+.items .i_tang {
+    top: 0px;
+    right: 0px;
+    z-index: 500;
+    width: 60px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: #1f4400;
+    color: #fff;
+    text-align: center;
+}
+
+.item_txt {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.i_cover {
+    z-index: 501;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(65, 65, 65);
+    text-align: center;
+    opacity: 0;
+    transition: .6s;
+    color: #003d00;
+}
+
+.i_cover>.col_txt {
+    padding-top: 140px;
+    display: block;
+}
+
+.i_cover>.col_txt .fa-plus {
+    color: rgb(54, 54, 54);
+    background-color: rgb(255, 255, 255);
+}
+
+.i_cover a {
+    font-family: 'GowunBatang-Regular';
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+@media screen and (min-width:1025px) {
+    .items1:hover .i_cover.t1 {
+        opacity: 0.7;
+    }
+
+    .items2:hover .i_cover.t2 {
+        opacity: 0.7;
+    }
+
+    .items3:hover .i_cover.t3 {
+        opacity: 0.7;
+    }
+
+    .items4:hover .i_cover.t4 {
+        opacity: 0.7;
+    }
+
+    .items5:hover .i_cover.t5 {
+        opacity: 0.7;
+    }
+
+    .items6:hover .i_cover.t6 {
+        opacity: 0.7;
+    }
+
+    .items7:hover .i_cover.t7 {
+        opacity: 0.7;
+    }
+
+    .items8:hover .i_cover.t8 {
+        opacity: 0.7;
+    }
+
+    .items9:hover .i_cover.t9 {
+        opacity: 0.7;
+    }
+
+    .good_i2 {
+        opacity: 0;
+    }
+}
+
+aside {
+    display: none;
+}
+
+@media screen and (max-width:1025px) {
+    .swiper_slide .good_i2 {
+        display: none;
+    }
+
+    .visual {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .best_w::after {
+        content: "";
+        width: 100%;
+        height: 200px;
+        background-color: #fff4f4;
+        display: block;
+        transform: translateY(-180px);
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* transform:translateY(200px); */
+        margin: 0px auto;
+    }
+
+    /* 버튼 공통서식  */
+
+    .button>.btn {
+        font-size: 14px;
+        margin: 10px;
+        display: block;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10px;
+        font-family: 'Noto Sans KR', 'MalgunGothic', sans-serif;
+        font-weight: normal;
+        transition: .3s;
+        text-align: center;
+    }
+
+    .button>.btn.left1 {
+        border: 1px solid #003d00;
+        color: #003d00;
+    }
+
+    .button>.btn.right1 {
+        background-color: #003d00;
+        color: #fff;
+    }
+
+    .button>.btn:hover {
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.685);
+        color: rgb(255, 34, 34);
+        border: 1px solid rgb(255, 34, 34);
+        animation: swing;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1s;
+        /* 버튼오버 공통서식*/
+        animation-iteration-count: infinite;
+    }
+
+    .items>h4 {
+        text-align: left;
+        font-size: 1.3rem;
+        text-indent: 20px;
+    }
+
+    .new_item {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        background-color: #ffffff;
+        padding: 20px;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .new_item {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0px auto;
+        display: grid;
+        background-color: #ffffff;
+        padding: 20px 10px 100px 10px;
+        grid-gap: 10px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+    }
+}

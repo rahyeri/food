@@ -1,0 +1,335 @@
+/*
+http://rahyeri.dothome.co.kr/food의 로그인css입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+@charset "utf-8";
+
+aside {
+  display: none;
+}
+
+@media screen and (min-width:1025px) {
+
+  /* 메인 */
+
+  section {
+    width: 650px;
+    height: 530px;
+    margin: 100px auto 0px auto;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+
+  .log {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .login_s>h3 {
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 70px;
+
+  }
+
+  .login_s fieldset {
+    /* background-color:yellow; */
+    width: 300px;
+  }
+
+  .login_s fieldset legend {
+    font-size: 20px;
+    line-height: 2;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .login_s fieldset label[for$="txt"] {
+    display: none;
+  }
+
+  .login_s fieldset input {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+
+  .login_s fieldset input[type="password"] {
+    margin-bottom: 20px;
+  }
+
+  #remember,
+  #auto {
+    width: 20px;
+    height: 20px;
+    /* vertical-align:middle; */
+    transform: translateY(-14px);
+  }
+
+  #login_btn {
+    width: 204px;
+    height: 40px;
+    background-color: #003d00;
+    color: #fff;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .id_search {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0px auto;
+  }
+
+  .id_search a {
+    display: inline-block;
+  }
+
+  .login_sns {
+    width: 300px;
+    /* transform:translateY(10px); */
+  }
+
+  .snslog {
+    width: 200px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .snslog.g {
+    background-color: #dd2f4c;
+  }
+
+  .snslog.f {
+    background-color: #073968;
+  }
+
+  .snslog.t {
+    background-color: #318dda;
+  }
+
+  .fab {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 27px;
+    padding: 9px 10px 0px 20px;
+  }
+
+  .sns_txt {
+    padding-left: 20px;
+    border-left: 1px solid #fff;
+  }
+
+
+  #login_btn1 {
+    width: 204px;
+    height: 40px;
+    background-color: #ff3116;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .join_txt {
+    display: block;
+    padding: 20px 0px;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .join_t {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* 마우스오버효과 */
+  input {
+    outline: none;
+  }
+
+  input:hover,
+  .snslog:hover {
+    opacity: 0.6;
+  }
+
+}
+
+/* 메인 */
+
+@media screen and (max-width:1024px) {
+
+  /* 메인 */
+
+  section {
+    height: fit-content;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+
+  .log {
+    width: 50%;
+    margin: 0px auto;
+  }
+
+  .login_s>h3 {
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    margin: 150px auto 50px auto;
+
+  }
+
+  .login_s fieldset {
+    /* background-color:yellow; */
+    /* width:300px; */
+  }
+
+  .login_s fieldset legend {
+    font-size: 20px;
+    line-height: 2;
+    display: none;
+    font-weight: bold;
+
+  }
+
+  .login_s fieldset label[for$="txt"] {
+    display: none;
+  }
+
+  .login_s fieldset input {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px;
+    color: black;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+
+  .login_s fieldset input[type="password"] {
+    margin-bottom: 20px;
+  }
+
+  #remember,
+  #auto {
+    width: 20px;
+    height: 20px;
+    /* vertical-align:middle; */
+    transform: translateY(-14px);
+  }
+
+  #login_btn {
+    width: 204px;
+    height: 40px;
+    background-color: #003d00;
+    color: #fff;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .id_search {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0px auto;
+  }
+
+  .id_search a {
+    display: inline-block;
+  }
+
+  .login_sns {
+    transform: translateY(20px);
+  }
+
+  .snslog {
+    width: 200px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .snslog.g {
+    background-color: #dd2f4c;
+  }
+
+  .snslog.f {
+    background-color: #073968;
+  }
+
+  .snslog.t {
+    background-color: #318dda;
+  }
+
+  .snslog>.fab {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 27px;
+    padding: 9px 10px 0px 20px;
+  }
+
+  .sns_txt {
+    padding-left: 20px;
+    border-left: 1px solid #fff;
+  }
+
+
+  #login_btn1 {
+    width: 204px;
+    height: 40px;
+    background-color: #ff3116;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom: 100px;
+  }
+
+  .join_txt {
+    display: block;
+    padding: 20px 0px;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .join_t {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* 마우스오버효과 */
+  input {
+    outline: none;
+  }
+
+
+}
